@@ -8,16 +8,18 @@
 
 
 function get_args($array){
+
     $array = array('Celia', 22, 11.11,'villiers');
-    print_r($array);
+    return print_r($array);
 }
-echo get_args('');
+get_args('');
 
 function get_last_arg(){
+
     $array = array('Celia', 22, 11.11,'villiers');
-    print_r(end($array));
+    return print_r(end($array));
 
 }
-echo get_last_arg('');
+get_last_arg('');
 
 ?>
