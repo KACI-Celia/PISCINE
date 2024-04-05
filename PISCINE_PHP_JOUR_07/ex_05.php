@@ -32,8 +32,12 @@ class Pony
     }
 
 }
-if (method_exists("Pony","ponyPink")){
-    return"I don't know what to do..." ."\n";
+if (is_callable(array("Pony","ponyPink"))){
+    echo $pony->ponywhite();
+}else{
+    echo "I don't know what to do..." ."\n";
 }
+
 $pony = new Pony("","","");
 echo $pony->ponyPink();
+echo $pony->speak();
