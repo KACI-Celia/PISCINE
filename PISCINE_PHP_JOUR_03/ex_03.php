@@ -8,7 +8,15 @@ my_add_to_cookie(“pseudo”, “Max_”);
 // Crée un cookie à la clef “pseudo” et a pour contenu “Max_swag”.   
  */
 
-function my_add_to_cookie(){
 
-    setcookie('pseudo', 'Max');
+function my_add_to_cookie($key, $value){
+
+    $valueUpdated = $value . "swag" ;
+    $unAn = 365*24*3600;
+    setcookie($key, $valueUpdated, time()+$unAn);
+    //setcookie pour creer le cookie
+
 }
+
+my_add_to_cookie("pseudo","Max_");
+echo $_COOKIE["pseudo"];//appeler le cookie

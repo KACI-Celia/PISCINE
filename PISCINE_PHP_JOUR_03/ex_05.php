@@ -8,5 +8,15 @@ my_add_to_session(“pseudo”, “Max_”);
 // Crée une variable de session à la clef “pseudo” ayant pour contenu “Max_swag”    
  */
 
+session_start();
+
+function my_add_to_session($key, $value){
+
+    $valueUpdated = $value . "swag" ;
+    $_SESSION[$key] = $valueUpdated;
+
+}
 
 
+my_add_to_session("pseudo","Max_");
+echo $_SESSION["pseudo"];
