@@ -72,6 +72,7 @@ class Fight{
 
         }elseif(rand(1, 20)===2){
             //challenger met un ko a ippo
+
             $challenger->strengh2 = $ippo->stamina;
             $ippo->stamina = $ippo->stamina - $challenger->strengh2;
 
@@ -86,8 +87,17 @@ class Fight{
             exit();
         }
     }
-    
+    public function attack($ippoTechnique, $challengerTechnique , $challenger, $ippo){
+        
+        if(rand(1,4)){
+            $random  = $ippoTechnique;
+            $ippoTechnique->random[]=$ippoTechnique->random[0]-$challenger->stamina2;
+
+            echo "youpi";
+        }
+    }
 }
 $fight= new Fight($ippo ,$challenger);
 echo $fight->fighting($ippo, $challenger);
+
 

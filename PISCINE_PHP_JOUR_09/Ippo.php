@@ -8,25 +8,21 @@ class Ippo{
     public $defense;
     public $stamina;
     public $speed;
+    public $ippoTechnique;
 
-    public $smash;
-    public $uppercut;
-    public $gazellepunch;
-    public $dempseyroll;
-
-    public function __construct($name, $strengh, $defense,$stamina, $speed, $smash, $uppercut, $gazellepunch, $dempseyroll)
+    public function __construct($name, $strengh, $defense,$stamina, $speed)
     {
         $this->name = $name;
         $this->strengh = $strengh;
         $this->defense = $defense;
         $this->stamina = $stamina;
         $this->speed = $speed;
-
-        $this->smash = $smash;
-        $this->uppercut = $uppercut;
-        $this->gazellepunch = $gazellepunch;
-        $this->dempseyroll = $dempseyroll;
-
+        $this->ippoTechnique =array(
+            array('smash',1403),
+            array('uppercut',1433),
+            array('Gazelle Punch',1423),
+            array('Dempsey Roll',1453)
+        );
     }
 
     public function setName($name){
@@ -59,33 +55,8 @@ class Ippo{
     public function getSpeed(){
         return $this->speed;
     }
-    public function setSmach($smash){
-        $this->smash = $smash;
-    }
-    public function getSmash(){
-        return $this->smash;
-    }
-    public function setUppercut($uppercut){
-        $this->uppercut = $uppercut;
-    }
-    public function getUppercut(){
-        return $this->uppercut;
-    }
-    public function setGazellepunch($gazellepunch){
-        $this->gazellepunch = $gazellepunch;
-    }
-    public function getGazellepunch(){
-        return $this->gazellepunch;
-    }
-    public function setDempsyroll($dempsyroll){
-        $this->dempseyroll = $dempsyroll;
-    }
-    public function getDempsyroll(){
-        return $this->dempseyroll;
-    }
-
 }
-$ippo= new Ippo("Ippo", 1403 , 867 , 24329 , 178, 1403, 1433, 1423, 1453);
+$ippo= new Ippo("Ippo", 1403 , 867 , 24329 , 178);
 echo $ippo->getName() ."\n"; 
 echo $ippo->getStrengh() ."\n";
 echo $ippo->getDefense() ."\n";
